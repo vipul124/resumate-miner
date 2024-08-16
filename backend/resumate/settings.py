@@ -13,7 +13,7 @@ SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'django-insecure-&psk#na5l=p3q8_a+-$
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DJANGO_DEBUG', True)
 
-ALLOWED_HOSTS = ['localhost', '0.0.0.0', '127.0.0.1', '172.177.226.93']
+ALLOWED_HOSTS = ['localhost', '0.0.0.0', '127.0.0.1', '172.177.226.93', os.getenv('PUBLIC_BACKEND_URL', 'vercel.app')]
 
 # Application definition
 
