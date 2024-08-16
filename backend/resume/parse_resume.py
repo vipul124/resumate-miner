@@ -10,6 +10,7 @@ from nltk.corpus import stopwords
 from datetime import date
 from spacy.matcher import Matcher
 from .models import ResumeData
+from .supermodel import skills_db
 
 # loading pre trained model
 model = spacy.load('en_core_web_sm')
@@ -134,8 +135,7 @@ def extract_skills(resume_text):
     tokens = [token.text for token in nlp_text if not token.is_stop]
 
     # reading the csv file
-    data = pd.read_csv(
-        "D:/IIT Kanpur/github/resumate/resumate/files/codes/skills.csv")
+    data = skills_db
 
     # extract values
     skills = list(data.skill_name.values)

@@ -33,7 +33,7 @@ class UploadResume(APIView):
                         status=status.HTTP_400_BAD_REQUEST
                     )
                 filename = uuid.uuid4().hex
-                unique_filename = f'./files/resume/{filename}.pdf'
+                unique_filename = f'./files/{filename}.pdf'
                 file_path = unique_filename
                 with open(file_path, 'wb+') as destination:
                     for chunk in uploaded_file.chunks():
